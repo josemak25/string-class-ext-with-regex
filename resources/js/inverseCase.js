@@ -1,13 +1,10 @@
-var customForEach = require('../helpers/customHighOrderFunctions');
-var toUpper = require('./toUpper');
-var toLower = require('./toLower');
-
 String.prototype.inverseCase = function() {
-  var splitCharacters = this.split('');
-  var formedWord = '';
-  var stringPattern = /[a-z]/;
-  customForEach.call(splitCharacters, function(char) {
-    return stringPattern.test(char) ? formedWord += char.toUpper() : formedWord += char.toLower();
-  });
-  return formedWord;
+  var stringPattern = /[a-zA-Z]/g;
+  return this.replace(stringPattern, inverseCharacter);
 };
+
+function inverseCharacter(char) {
+  return char.charCodeAt(0) >= 65 && char.charCodeAt(0) <= 90
+    ? String.fromCharCode(char.charCodeAt(0) + 32)
+    : String.fromCharCode(char.charCodeAt(0) - 32);
+}
