@@ -2,7 +2,7 @@
 
 module.exports = function customForEach(callback) {
   for (var index = 0; index < this.length; index++) {
-    callback(this[index], index, this);
+    callback(this[index], index);
   }
 };
 
@@ -11,7 +11,7 @@ module.exports = function customForEach(callback) {
 module.exports = function customMap(callback) {
   var newArray = [];
   for (var index = 0; index < this.length; index++) {
-    var element = callback(this[index], index, this);
+    var element = callback(this[index], index);
     newArray.push(element);
   }
   return newArray;
