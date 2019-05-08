@@ -5,5 +5,5 @@ String.prototype.toUpper = function() {
 };
 
 function changeToUpper(char) {
-  return String.fromCharCode(char.charCodeAt(0) & 223);
+  return char.charCodeAt(0) >= 97 && char.charCodeAt(0) <= 122 ? String.fromCharCode(char.charCodeAt(0) - 32) : char;
 }
