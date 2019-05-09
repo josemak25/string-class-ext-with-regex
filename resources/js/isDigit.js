@@ -1,19 +1,7 @@
 // setting isDigit method to string protoype
 
 String.prototype.isDigit = function() {
-  var digit = /^[0-9]{1}$/; // setting regex pattern to match agains't string
-
-  /**
-   * ********this*********
-   * this in the context points to the string calling the function.
-   * *******test*******
-   * test a regex method often used to check if something
-   * is true or false using the regex pattern given
-   *
-   * ******true / false ********
-   *returning true if the string is a one letter digit or if its not
-   *
-   */
-
-  return digit.test(this) ? true : false;
+  var digitPattern = /^[0-9]{1}$/; // the regex matches number as a single digit on the string
+  // if  the digit in the string is found to be a single number as test by  digitPattern it return true else return false
+  return digitPattern.test(this) ? true : false;
 };

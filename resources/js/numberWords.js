@@ -2,24 +2,15 @@
 
 String.prototype.numberWords = function() {
   // set wordHolder for comparing and returning matched value of a digit for its word case
-
   var wordHolder = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'];
-
-  var digitPattern = /\d/g; // setting regex pattern to match agains't string
-
-  /**
-   * ********this*********
-   * this in the context points to the string calling the function.
-   * *******test*******
-   * test a regex method often used to check if something
-   * is true or false using the regex pattern given
-   *
-   *returning each matched digit value from the
-   *  wordHolder from which each replace iteration is made
-   * and concant the results in the end of each iteration
+  var digitPattern = /\d/g; // the regex matches all numbers found on the string
+  /*
+   * Using the defined digitPattern to replace a digit
+   * with its word in string if the number matches the
+   * index of a word in the wordHolder array and return the
+   * result of each matched value with a concanted string space to serprate each word
    */
-
-  return this.replace(digitPattern, function(num) {
-    return wordHolder[num].concat(' ');
+  return this.replace(digitPattern, function(number) {
+    return wordHolder[number].concat(' ');
   });
 };

@@ -3,14 +3,8 @@ const splitIntoWords = require('./splitIntoWords'); // importing splitintoWords 
 // setting wordCount method to string protoype
 
 String.prototype.wordCount = function() {
-  /**
-   * ********this*********
-   * this in the context points to the string calling the function.
-   *
-   *splitedWords takes the return array produced by splitIntoWords function
-   *and returns the array length as the number of words in count on the string (this)
-   */
-
+  //returns a number of how many words are in the string using with the help of
+  //splitIntoWords function which matches all words in the string and returns an array
   var splitedWords = this.splitIntoWords();
   return splitedWords.length;
 };
