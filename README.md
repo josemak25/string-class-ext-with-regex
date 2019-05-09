@@ -6,7 +6,11 @@ Extending Javascript String class with custom methods implement with Regex
 ## Description
 This is an extension of the String Class in JavaScript. with custom methods that support more string manipulation features.
 
+
+# ALL TESTS WHERE DONE WITH JEST
+
 ## Custom Methods
+
 * hasVowels (typeof **Boolean**): Returns true if the string contains vowels. This method is implemented using Regular Expression.
 
     ```JavaScript
@@ -143,5 +147,5 @@ This is an extension of the String Class in JavaScript. with custom methods that
     ```
 
 
-## Motivation
+## Credits
 Decagon Institute. 
