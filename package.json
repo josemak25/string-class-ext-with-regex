@@ -1,0 +1,24 @@
+{
+  "name": "string_class_ext_with_regex",
+  "version": "1.0.0",
+  "description": "Extending Javascript String class with custom methods implement with Regex",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/josemak25/string_class_ext_with_regex.git"
+  },
+  "keywords": [],
+  "author": "Amakiri Joseph",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/josemak25/string_class_ext_with_regex/issues"
+  },
+  "homepage": "https://github.com/josemak25/string_class_ext_with_regex#readme",
+  "dependencies": {
+    "@types/jest": "^24.0.12",
+    "jest": "^24.8.0"
+  }
+}
